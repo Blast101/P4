@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <div class="container">
+        <div class="btn">
+            <div id="tabs_link">
+                <div class="b b1">
+                    <a href="javascript:void(0)" id="test1" class="tab">Personal</a>
+                </div>
+                <div class="b b2">
+                    <a href="javascript:void(0)" id="test2" class="tab not_active">create</a>
+                </div>
+                <div class="b b3">
+                    <a href="javascript:void(0)" id="test3" class="tab not_active">upload</a>
+                </div>
+                <div class="b b4">
+                    <a href="javascript:void(0)" id="test4" class="tab not_active">display</a>
+                </div>
+                <div class="b b5">
+                    <a href="javascript:void(0)" id="test5" class="tab not_active">Camps</a>
+                </div>
+            </div>
+            <!-- tabs_link -->
+        </div>
+        <!-- btn -->
+
+        <div id='box_test1' class="tab_box">
+            <div class="scroll-bar">
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+
+                <div class="t t1">
+                    <h1>world</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div id='box_test2' class="tab_box hide">
+            <h1>Create</h1>
+        </div>
+
+
+        <div id='box_test3' class="tab_box hide">
+            <h1>Upload</h1>
+        </div>
+
+
+        <div id='box_test4' class="tab_box hide">
+            <h1>display</h1>
+        </div>
+
+
+        <div id='box_test5' class="tab_box hide">
+            <h1>camps</h1>
+        </div>
+
+        <script>
+            let tab = document.querySelector('#tabs_link');
+
+            tab.addEventListener('click', function (e) {
+                let id = e.target.id;
+
+                let ele = document.querySelectorAll('.tab_box');
+
+                let len = ele.length;
+
+                for (let x = 0; x < len; x++) {
+                    ele[x].classList.add('hide')
+                }
+                // document.querySelector('.tab_box').classList.add('hide');
+                document.querySelector('#box_' + id).classList.remove('hide');
+
+
+                let ele1 = document.querySelectorAll('.tab');
+
+                let len1 = ele1.length;
+
+                for (let x = 0; x < len1; x++) {
+                    ele1[x].classList.add('not_active')
+                }
+                // document.querySelector('.tab_box').classList.add('hide');
+                document.querySelector('#' + id).classList.remove('not_active');
+            });
+        </script>
+    </div>
+</body>
+
+</html>
